@@ -6,7 +6,7 @@ add-apt-repository https://ppa.pika-os.com
 add-apt-repository ppa:pikaos/pika
 add-apt-repository ppa:kubuntu-ppa/backports
 # Clone Upstream
-git clone https://gitlab.gnome.org/GNOME/mutter -b 43.1
+git clone https://gitlab.gnome.org/GNOME/mutter -b 43.0
 mv ./mutter ./mutter-vrr
 cp -rvf ./debian ./mutter-vrr
 cd ./mutter-vrr
