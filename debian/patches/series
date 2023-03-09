@@ -3,7 +3,7 @@ tests-Disable-broken-test.patch
 tests-Mark-view-verification-tests-as-incomplete-in-big-e.patch
 theme-load-icons-as-Gtk-does-with-fallback-and-RTL-suppor.patch
 theme-use-gtk_render_icon_suface-to-paint-button-icon.patch
-#monitor-Keep-the-dbus-night-light-supported-property-in-s.patch
+monitor-Keep-the-dbus-night-light-supported-property-in-s.patch
 color-device-Always-become-ready-no-matter-if-we-succeede.patch
 color-device-Return-early-if-the-deivce-becomes-ready-due.patch
 color-device-Don-t-create-profiles-from-obvious-garbage-d.patch
@@ -17,6 +17,4 @@ debian/tests-skip-monitor-width-size-check-as-it-may-lead-to-une.patch
 debian/tests-Tag-unstable-tests-as-flaky.patch
 debian/wayland-data-device-Allow-any-drag-timestamp-as-drag-star.patch
 ubuntu/x11-Add-support-for-fractional-scaling-using-Randr.patch
-
 pika/vrr.patch
-
