@@ -4,6 +4,7 @@ DEBIAN_FRONTEND=noninteractive
 git clone mutter-vrr https://gitlab.gnome.org/GNOME/mutter -b 44.2
 cd ./mutter-vrr
 patch -Np1 -i debian/meson-add-back-default_driver-option.patch
+patch -Np1 -i tests-Mark-view-verification-tests-as-incomplete-in-big-e.patch
 
 # Get build deps
 apt-get build-dep ./ -y
