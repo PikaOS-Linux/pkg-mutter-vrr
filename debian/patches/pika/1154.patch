@@ -264,7 +264,6 @@ diff '--color=auto' -ru a/data/dbus-interfaces/org.gnome.Mutter.DisplayConfig.xm
  
  	@properties may effect the global monitor configuration state. Possible
  	properties are:
-Only in b/data/dbus-interfaces: org.gnome.Mutter.DisplayConfig.xml.orig
 diff '--color=auto' -ru a/data/org.gnome.mutter.gschema.xml.in b/data/org.gnome.mutter.gschema.xml.in
 --- a/data/org.gnome.mutter.gschema.xml.in	2023-06-26 23:37:52.907973534 +0300
 +++ b/data/org.gnome.mutter.gschema.xml.in	2023-06-26 23:41:10.291076521 +0300
@@ -289,6 +288,9 @@ diff '--color=auto' -ru a/data/org.gnome.mutter.gschema.xml.in b/data/org.gnome.
          • “x11-randr-fractional-scaling” — enable fractional scaling under X11
                                             using xrandr scaling. It might reduce
                                             performances.
+Only in a/: meson.build.orig
+Only in a/src/backends: meta-backend.c.orig
+Only in a/src/backends: meta-crtc.c.orig
 diff '--color=auto' -ru a/src/backends/meta-monitor.c b/src/backends/meta-monitor.c
 --- a/src/backends/meta-monitor.c	2023-06-26 23:37:52.914637344 +0300
 +++ b/src/backends/meta-monitor.c	2023-06-26 23:39:00.089086383 +0300
@@ -347,7 +349,6 @@ diff '--color=auto' -ru a/src/backends/meta-monitor-config-manager.c b/src/backe
          .has_max_bpc = monitor_config_in->has_max_bpc,
          .max_bpc = monitor_config_in->max_bpc
        };
-Only in b/src/backends: meta-monitor-config-manager.c.orig
 diff '--color=auto' -ru a/src/backends/meta-monitor-config-manager.h b/src/backends/meta-monitor-config-manager.h
 --- a/src/backends/meta-monitor-config-manager.h	2023-06-26 23:37:52.907973534 +0300
 +++ b/src/backends/meta-monitor-config-manager.h	2023-06-26 23:39:00.085761398 +0300
@@ -461,7 +462,7 @@ diff '--color=auto' -ru a/src/backends/meta-monitor-config-store.c b/src/backend
  static void
  append_transform (GString             *buffer,
                    MetaMonitorTransform transform)
-Only in b/src/backends: meta-monitor-config-store.c.orig
+Only in a/src/backends: meta-monitor.c.orig
 diff '--color=auto' -ru a/src/backends/meta-monitor.h b/src/backends/meta-monitor.h
 --- a/src/backends/meta-monitor.h	2023-06-03 13:32:03.000000000 +0300
 +++ b/src/backends/meta-monitor.h	2023-06-26 23:39:00.089086383 +0300
@@ -534,7 +535,7 @@ diff '--color=auto' -ru a/src/backends/meta-monitor-manager.c b/src/backends/met
    };
  
    return monitor_config;
-Only in b/src/backends: meta-monitor-manager.c.orig
+Only in a/src/backends: meta-monitor-manager-dummy.c.orig
 diff '--color=auto' -ru a/src/backends/meta-monitor-manager-private.h b/src/backends/meta-monitor-manager-private.h
 --- a/src/backends/meta-monitor-manager-private.h	2023-06-26 23:37:52.911305439 +0300
 +++ b/src/backends/meta-monitor-manager-private.h	2023-06-26 23:39:00.089086383 +0300
@@ -546,7 +547,6 @@ diff '--color=auto' -ru a/src/backends/meta-monitor-manager-private.h b/src/back
    gboolean has_max_bpc;
    unsigned int max_bpc;
  };
-Only in b/src/backends: meta-monitor-manager-private.h.orig
 diff '--color=auto' -ru a/src/backends/meta-output.c b/src/backends/meta-output.c
 --- a/src/backends/meta-output.c	2023-06-03 13:32:03.000000000 +0300
 +++ b/src/backends/meta-output.c	2023-06-26 23:39:00.092411370 +0300
@@ -740,7 +740,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-backend-native.c b/src/backen
    if (meta_is_udev_device_preferred_primary (device))
      flags |= META_KMS_DEVICE_FLAG_PREFERRED_PRIMARY;
  
-Only in b/src/backends/native: meta-backend-native.c.orig
+Only in a/src/backends/native: meta-cursor-renderer-native.c.orig
 diff '--color=auto' -ru a/src/backends/native/meta-gpu-kms.c b/src/backends/native/meta-gpu-kms.c
 --- a/src/backends/native/meta-gpu-kms.c	2023-06-03 13:32:03.000000000 +0300
 +++ b/src/backends/native/meta-gpu-kms.c	2023-06-26 23:39:00.095736355 +0300
@@ -1217,7 +1217,6 @@ diff '--color=auto' -ru a/src/backends/native/meta-output-kms.c b/src/backends/n
    max_bpc_range = meta_kms_connector_get_max_bpc (kms_connector);
    if (max_bpc_range)
      {
-Only in b/src/backends/native: meta-output-kms.c.orig
 diff '--color=auto' -ru a/src/backends/native/meta-output-kms.h b/src/backends/native/meta-output-kms.h
 --- a/src/backends/native/meta-output-kms.h	2023-06-03 13:32:03.000000000 +0300
 +++ b/src/backends/native/meta-output-kms.h	2023-06-26 23:39:00.099061341 +0300
@@ -1483,7 +1482,6 @@ diff '--color=auto' -ru a/src/backends/native/meta-udev.c b/src/backends/native/
  meta_is_udev_device_ignore (GUdevDevice *device)
  {
    return meta_has_udev_device_tag (device, "mutter-device-ignore");
-Only in b/src/backends/native: meta-udev.c.orig
 diff '--color=auto' -ru a/src/backends/native/meta-udev.h b/src/backends/native/meta-udev.h
 --- a/src/backends/native/meta-udev.h	2023-06-03 13:32:03.000000000 +0300
 +++ b/src/backends/native/meta-udev.h	2023-06-26 23:39:00.102386326 +0300
@@ -1496,7 +1494,6 @@ diff '--color=auto' -ru a/src/backends/native/meta-udev.h b/src/backends/native/
  gboolean meta_is_udev_device_ignore (GUdevDevice *device);
  
  gboolean meta_is_udev_test_device (GUdevDevice *device);
-Only in b/src/backends/native: meta-udev.h.orig
 diff '--color=auto' -ru a/src/backends/x11/nested/meta-renderer-x11-nested.c b/src/backends/x11/nested/meta-renderer-x11-nested.c
 --- a/src/backends/x11/nested/meta-renderer-x11-nested.c	2023-06-03 13:32:03.000000000 +0300
 +++ b/src/backends/x11/nested/meta-renderer-x11-nested.c	2023-06-26 23:39:00.102386326 +0300
@@ -1853,7 +1850,6 @@ diff '--color=auto' -ru a/src/compositor/meta-surface-actor.c b/src/compositor/m
    if (!frozen && priv->pending_damage)
      {
        int i, n_rects = cairo_region_num_rectangles (priv->pending_damage);
-Only in b/src/compositor: meta-surface-actor.c.orig
 diff '--color=auto' -ru a/src/compositor/meta-surface-actor.h b/src/compositor/meta-surface-actor.h
 --- a/src/compositor/meta-surface-actor.h	2023-06-03 13:32:03.000000000 +0300
 +++ b/src/compositor/meta-surface-actor.h	2023-06-26 23:39:00.102386326 +0300
@@ -1885,75 +1881,7 @@ diff '--color=auto' -ru a/src/core/window.c b/src/core/window.c
  /**
   * meta_window_get_buffer_rect:
   * @window: a #MetaWindow
-diff '--color=auto' -ru a/src/core/window.c.orig b/src/core/window.c.orig
---- a/src/core/window.c.orig	2023-06-26 23:37:52.921301154 +0300
-+++ b/src/core/window.c.orig	2023-06-26 23:37:52.931296869 +0300
-@@ -73,6 +73,7 @@
- #include "core/constraints.h"
- #include "core/frame.h"
- #include "core/keybindings-private.h"
-+#include "core/meta-private-introspected.h"
- #include "core/meta-workspace-manager-private.h"
- #include "core/place.h"
- #include "core/stack.h"
-@@ -2873,6 +2874,38 @@
-     meta_window_tile (tile_match, tile_match->tile_mode);
- }
- 
-+G_ALWAYS_INLINE static inline MetaEdgeConstraint
-+get_edge_constraint (MetaWindowConstraint constraint)
-+{
-+  switch (constraint)
-+    {
-+      case META_WINDOW_CONSTRAINT_NONE:
-+        return META_EDGE_CONSTRAINT_NONE;
-+      case META_WINDOW_CONSTRAINT_WINDOW:
-+        return META_EDGE_CONSTRAINT_WINDOW;
-+      case META_WINDOW_CONSTRAINT_MONITOR:
-+        return META_EDGE_CONSTRAINT_MONITOR;
-+    }
-+
-+  g_return_val_if_reached (META_WINDOW_CONSTRAINT_NONE);
-+}
-+
-+void
-+meta_window_override_constraints (MetaWindow           *window,
-+                                  MetaWindowConstraint  top,
-+                                  MetaWindowConstraint  left,
-+                                  MetaWindowConstraint  right,
-+                                  MetaWindowConstraint  bottom)
-+{
-+  window->overridden_constraints.left = get_edge_constraint (left);
-+  window->overridden_constraints.right = get_edge_constraint (right);
-+  window->overridden_constraints.top = get_edge_constraint (top);
-+  window->overridden_constraints.bottom = get_edge_constraint (bottom);
-+
-+  update_edge_constraints (window);
-+  meta_window_frame_size_changed (window);
-+}
-+
- static void
- update_edge_constraints (MetaWindow *window)
- {
-@@ -2928,6 +2961,18 @@
-       window->edge_constraints.right = META_EDGE_CONSTRAINT_MONITOR;
-       window->edge_constraints.left = META_EDGE_CONSTRAINT_MONITOR;
-     }
-+
-+  if (window->overridden_constraints.top != META_EDGE_CONSTRAINT_NONE)
-+      window->edge_constraints.top = window->overridden_constraints.top;
-+
-+  if (window->overridden_constraints.bottom != META_EDGE_CONSTRAINT_NONE)
-+      window->edge_constraints.bottom = window->overridden_constraints.bottom;
-+
-+  if (window->overridden_constraints.left != META_EDGE_CONSTRAINT_NONE)
-+      window->edge_constraints.left = window->overridden_constraints.left;
-+
-+  if (window->overridden_constraints.right != META_EDGE_CONSTRAINT_NONE)
-+      window->edge_constraints.right = window->overridden_constraints.right;
- }
- 
- void
+Only in a/src/core: window.c.orig
 diff '--color=auto' -ru a/src/core/window-private.h b/src/core/window-private.h
 --- a/src/core/window-private.h	2023-06-26 23:37:52.931296869 +0300
 +++ b/src/core/window-private.h	2023-06-26 23:39:00.102386326 +0300
@@ -1967,7 +1895,8 @@ diff '--color=auto' -ru a/src/core/window-private.h b/src/core/window-private.h
  void        meta_window_update_unfocused_button_grabs (MetaWindow *window);
  
  void        meta_window_update_appears_focused (MetaWindow *window);
-Only in b/src/core: window-private.h.orig
+Only in a/src: meson.build.orig
+Only in a/src/tests: meson.build.orig
 diff '--color=auto' -ru a/src/tests/meta-monitor-test-utils.c b/src/tests/meta-monitor-test-utils.c
 --- a/src/tests/meta-monitor-test-utils.c	2023-06-03 13:32:03.000000000 +0300
 +++ b/src/tests/meta-monitor-test-utils.c	2023-06-26 23:39:00.109036297 +0300
@@ -2009,6 +1938,7 @@ diff '--color=auto' -ru a/src/tests/meta-monitor-test-utils.h b/src/tests/meta-m
    unsigned int max_bpc;
  } MonitorTestCaseMonitor;
  
+Only in a/src/tests: meta-ref-test.c.orig
 Only in b/src/tests/monitor-configs: vrr-allowed.xml
 diff '--color=auto' -ru a/src/tests/monitor-store-unit-tests.c b/src/tests/monitor-store-unit-tests.c
 --- a/src/tests/monitor-store-unit-tests.c	2023-06-03 13:32:03.000000000 +0300
@@ -2318,3 +2248,4 @@ diff '--color=auto' -ru a/src/tests/monitor-unit-tests.c b/src/tests/monitor-uni
    add_monitor_test ("/backends/monitor/custom/scale-config",
                      meta_test_monitor_custom_scale_config);
    add_monitor_test ("/backends/monitor/custom/fractional-scale-config",
+Only in a/src/wayland: meta-wayland-data-device.c.orig
