@@ -88,7 +88,8 @@ Build-Depends: debhelper-compat (= 13),
                xkb-data,
                xvfb,
                xwayland [linux-any],
-               zenity
+               zenity,
+               libgnome-desktop-4-dev
 Rules-Requires-Root: no
 Standards-Version: 4.6.1
 XS-Debian-Vcs-Git: https://salsa.debian.org/gnome-team/mutter.git -b debian/unstable
