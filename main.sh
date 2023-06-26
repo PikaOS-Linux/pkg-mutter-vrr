@@ -8,7 +8,7 @@ cd ./mutter-vrr
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make --createorig -y -l -p mutter-vrr_44.2
+LOGNAME=root dh_make --createorig -y -l -p mutter-vrr_44.2 || true
 cp -rvf ./debian ./mutter-vrr
 dpkg-buildpackage
 
