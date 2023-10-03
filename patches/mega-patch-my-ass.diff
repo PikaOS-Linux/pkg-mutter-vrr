@@ -1,4 +1,4 @@
-diff '--color=auto' -ru a/clutter/clutter/clutter-frame-clock.c b/clutter/clutter/clutter-frame-clock.c
+diff '--color=auto' -ruN a/clutter/clutter/clutter-frame-clock.c b/clutter/clutter/clutter-frame-clock.c
 --- a/clutter/clutter/clutter-frame-clock.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/clutter/clutter/clutter-frame-clock.c	2023-10-03 20:26:00.169129039 +0300
 @@ -37,6 +37,8 @@
@@ -213,7 +213,7 @@ diff '--color=auto' -ru a/clutter/clutter/clutter-frame-clock.c b/clutter/clutte
  }
  
  static void
-diff '--color=auto' -ru a/clutter/clutter/clutter-frame-clock.h b/clutter/clutter/clutter-frame-clock.h
+diff '--color=auto' -ruN a/clutter/clutter/clutter-frame-clock.h b/clutter/clutter/clutter-frame-clock.h
 --- a/clutter/clutter/clutter-frame-clock.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/clutter/clutter/clutter-frame-clock.h	2023-10-03 20:26:00.169129039 +0300
 @@ -54,6 +54,12 @@
@@ -240,7 +240,7 @@ diff '--color=auto' -ru a/clutter/clutter/clutter-frame-clock.h b/clutter/clutte
  void clutter_frame_clock_notify_presented (ClutterFrameClock *frame_clock,
                                             ClutterFrameInfo  *frame_info);
  
-diff '--color=auto' -ru a/cogl/cogl/winsys/cogl-onscreen-glx.c b/cogl/cogl/winsys/cogl-onscreen-glx.c
+diff '--color=auto' -ruN a/cogl/cogl/winsys/cogl-onscreen-glx.c b/cogl/cogl/winsys/cogl-onscreen-glx.c
 --- a/cogl/cogl/winsys/cogl-onscreen-glx.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/cogl/cogl/winsys/cogl-onscreen-glx.c	2023-10-03 20:26:00.165795662 +0300
 @@ -540,6 +540,8 @@
@@ -252,7 +252,7 @@ diff '--color=auto' -ru a/cogl/cogl/winsys/cogl-onscreen-glx.c b/cogl/cogl/winsy
    if (!_cogl_winsys_has_feature (COGL_WINSYS_FEATURE_BUFFER_AGE))
      return 0;
  
-diff '--color=auto' -ru a/data/61-mutter.rules b/data/61-mutter.rules
+diff '--color=auto' -ruN a/data/61-mutter.rules b/data/61-mutter.rules
 --- a/data/61-mutter.rules	2023-09-16 23:51:03.000000000 +0300
 +++ b/data/61-mutter.rules	2023-10-03 20:26:00.169129039 +0300
 @@ -1,3 +1,4 @@
@@ -260,7 +260,7 @@ diff '--color=auto' -ru a/data/61-mutter.rules b/data/61-mutter.rules
  DRIVERS=="i915", SUBSYSTEM=="drm", ATTRS{vendor}=="0x8086", ATTRS{device}=="0x1602", TAG+="mutter-device-disable-kms-modifiers"
  DRIVERS=="i915", SUBSYSTEM=="drm", ATTRS{vendor}=="0x8086", ATTRS{device}=="0x1606", TAG+="mutter-device-disable-kms-modifiers"
  DRIVERS=="i915", SUBSYSTEM=="drm", ATTRS{vendor}=="0x8086", ATTRS{device}=="0x160a", TAG+="mutter-device-disable-kms-modifiers"
-diff '--color=auto' -ru a/data/dbus-interfaces/org.gnome.Mutter.DisplayConfig.xml b/data/dbus-interfaces/org.gnome.Mutter.DisplayConfig.xml
+diff '--color=auto' -ruN a/data/dbus-interfaces/org.gnome.Mutter.DisplayConfig.xml b/data/dbus-interfaces/org.gnome.Mutter.DisplayConfig.xml
 --- a/data/dbus-interfaces/org.gnome.Mutter.DisplayConfig.xml	2023-09-16 23:51:03.000000000 +0300
 +++ b/data/dbus-interfaces/org.gnome.Mutter.DisplayConfig.xml	2023-10-03 20:26:00.169129039 +0300
 @@ -343,6 +343,10 @@
@@ -296,7 +296,7 @@ diff '--color=auto' -ru a/data/dbus-interfaces/org.gnome.Mutter.DisplayConfig.xm
  
  	@properties may effect the global monitor configuration state. Possible
  	properties are:
-diff '--color=auto' -ru a/data/meson.build b/data/meson.build
+diff '--color=auto' -ruN a/data/meson.build b/data/meson.build
 --- a/data/meson.build	2023-09-16 23:51:03.000000000 +0300
 +++ b/data/meson.build	2023-10-03 20:26:00.102461495 +0300
 @@ -41,6 +41,13 @@
@@ -313,7 +313,7 @@ diff '--color=auto' -ru a/data/meson.build b/data/meson.build
  install_data(['mutter-schemas.convert'],
    install_dir: datadir / 'GConf/gsettings',
  )
-diff '--color=auto' -ru a/data/org.gnome.mutter.gschema.xml.in b/data/org.gnome.mutter.gschema.xml.in
+diff '--color=auto' -ruN a/data/org.gnome.mutter.gschema.xml.in b/data/org.gnome.mutter.gschema.xml.in
 --- a/data/org.gnome.mutter.gschema.xml.in	2023-09-16 23:51:03.000000000 +0300
 +++ b/data/org.gnome.mutter.gschema.xml.in	2023-10-03 20:27:52.250610631 +0300
 @@ -5,6 +5,7 @@
@@ -352,8 +352,41 @@ diff '--color=auto' -ru a/data/org.gnome.mutter.gschema.xml.in b/data/org.gnome.
        </description>
      </key>
  
-Only in b/data: org.gnome.mutter.x11.gschema.xml.in
-diff '--color=auto' -ru a/meson.build b/meson.build
+diff '--color=auto' -ruN a/data/org.gnome.mutter.x11.gschema.xml.in b/data/org.gnome.mutter.x11.gschema.xml.in
+--- a/data/org.gnome.mutter.x11.gschema.xml.in	1970-01-01 02:00:00.000000000 +0200
++++ b/data/org.gnome.mutter.x11.gschema.xml.in	2023-10-03 20:26:00.102461495 +0300
+@@ -0,0 +1,30 @@
++<schemalist>
++
++  <enum id="org.gnome.mutter.X11.scale-mode">
++    <value nick="scale-up" value="1"/>
++    <value nick="scale-ui-down" value="2"/>
++  </enum>
++
++  <schema id="org.gnome.mutter.x11" path="/org/gnome/mutter/x11/"
++          gettext-domain="@GETTEXT_DOMAIN@">
++
++    <key name="fractional-scale-mode" enum="org.gnome.mutter.X11.scale-mode">
++      <default>"scale-ui-down"</default>
++      <description>
++        Choose the scaling mode to be used under X11 via Randr extension.
++
++        Supported methods are:
++
++        • “scale-up”     — Scale everything up to the requested scale, shrinking
++                           the UI. The applications will look blurry when scaling
++                           at higher values and the resolution will be lowered.
++        • “scale-ui-down — Scale up the UI toolkits to the closest integer
++                           scaling value upwards, while scale down the display
++                           to match the requested scaling level.
++                           It increases the resolution of the logical display.
++      </description>
++    </key>
++
++  </schema>
++
++</schemalist>
+diff '--color=auto' -ruN a/meson.build b/meson.build
 --- a/meson.build	2023-09-16 23:51:03.000000000 +0300
 +++ b/meson.build	2023-10-03 20:26:00.099128118 +0300
 @@ -398,7 +398,7 @@
@@ -365,7 +398,7 @@ diff '--color=auto' -ru a/meson.build b/meson.build
    xvfb_args = [
      '-a',
      '-s',
-diff '--color=auto' -ru a/src/backends/meta-crtc.c b/src/backends/meta-crtc.c
+diff '--color=auto' -ruN a/src/backends/meta-crtc.c b/src/backends/meta-crtc.c
 --- a/src/backends/meta-crtc.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-crtc.c	2023-10-03 20:26:00.102461495 +0300
 @@ -125,6 +125,7 @@
@@ -403,7 +436,7 @@ diff '--color=auto' -ru a/src/backends/meta-crtc.c b/src/backends/meta-crtc.c
  static void
  meta_crtc_set_property (GObject      *object,
                          guint         prop_id,
-diff '--color=auto' -ru a/src/backends/meta-crtc.h b/src/backends/meta-crtc.h
+diff '--color=auto' -ruN a/src/backends/meta-crtc.h b/src/backends/meta-crtc.h
 --- a/src/backends/meta-crtc.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-crtc.h	2023-10-03 20:26:00.102461495 +0300
 @@ -30,6 +30,7 @@
@@ -426,7 +459,7 @@ diff '--color=auto' -ru a/src/backends/meta-crtc.h b/src/backends/meta-crtc.h
  META_EXPORT_TEST
  void meta_crtc_unset_config (MetaCrtc *crtc);
  
-diff '--color=auto' -ru a/src/backends/meta-egl.c b/src/backends/meta-egl.c
+diff '--color=auto' -ruN a/src/backends/meta-egl.c b/src/backends/meta-egl.c
 --- a/src/backends/meta-egl.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-egl.c	2023-10-03 20:26:00.165795662 +0300
 @@ -238,6 +238,14 @@
@@ -444,7 +477,7 @@ diff '--color=auto' -ru a/src/backends/meta-egl.c b/src/backends/meta-egl.c
  gboolean
  meta_egl_initialize (MetaEgl   *egl,
                       EGLDisplay display,
-diff '--color=auto' -ru a/src/backends/meta-egl.h b/src/backends/meta-egl.h
+diff '--color=auto' -ruN a/src/backends/meta-egl.h b/src/backends/meta-egl.h
 --- a/src/backends/meta-egl.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-egl.h	2023-10-03 20:26:00.165795662 +0300
 @@ -47,6 +47,10 @@
@@ -458,7 +491,7 @@ diff '--color=auto' -ru a/src/backends/meta-egl.h b/src/backends/meta-egl.h
  gboolean meta_egl_initialize (MetaEgl   *egl,
                                EGLDisplay display,
                                GError   **error);
-diff '--color=auto' -ru a/src/backends/meta-monitor.c b/src/backends/meta-monitor.c
+diff '--color=auto' -ruN a/src/backends/meta-monitor.c b/src/backends/meta-monitor.c
 --- a/src/backends/meta-monitor.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-monitor.c	2023-10-03 20:26:00.169129039 +0300
 @@ -371,6 +371,25 @@
@@ -495,7 +528,7 @@ diff '--color=auto' -ru a/src/backends/meta-monitor.c b/src/backends/meta-monito
    do
      {
        for (j = 0; j < 2; j++)
-diff '--color=auto' -ru a/src/backends/meta-monitor-config-manager.c b/src/backends/meta-monitor-config-manager.c
+diff '--color=auto' -ruN a/src/backends/meta-monitor-config-manager.c b/src/backends/meta-monitor-config-manager.c
 --- a/src/backends/meta-monitor-config-manager.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-monitor-config-manager.c	2023-10-03 20:26:00.169129039 +0300
 @@ -216,6 +216,18 @@
@@ -736,7 +769,7 @@ diff '--color=auto' -ru a/src/backends/meta-monitor-config-manager.c b/src/backe
      case META_LOGICAL_MONITOR_LAYOUT_MODE_LOGICAL:
        expected_mode_width = roundf (expected_mode_width *
                                      logical_monitor_config->scale);
-diff '--color=auto' -ru a/src/backends/meta-monitor-config-manager.h b/src/backends/meta-monitor-config-manager.h
+diff '--color=auto' -ruN a/src/backends/meta-monitor-config-manager.h b/src/backends/meta-monitor-config-manager.h
 --- a/src/backends/meta-monitor-config-manager.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-monitor-config-manager.h	2023-10-03 20:26:00.169129039 +0300
 @@ -31,6 +31,7 @@
@@ -766,7 +799,7 @@ diff '--color=auto' -ru a/src/backends/meta-monitor-config-manager.h b/src/backe
                                               GError                     **error);
  
  META_EXPORT_TEST
-diff '--color=auto' -ru a/src/backends/meta-monitor-config-store.c b/src/backends/meta-monitor-config-store.c
+diff '--color=auto' -ruN a/src/backends/meta-monitor-config-store.c b/src/backends/meta-monitor-config-store.c
 --- a/src/backends/meta-monitor-config-store.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-monitor-config-store.c	2023-10-03 20:26:00.169129039 +0300
 @@ -165,6 +165,7 @@
@@ -903,7 +936,7 @@ diff '--color=auto' -ru a/src/backends/meta-monitor-config-store.c b/src/backend
        if (monitor_config->has_max_bpc)
          {
            g_string_append_printf (buffer, "        <maxbpc>%u</maxbpc>\n",
-diff '--color=auto' -ru a/src/backends/meta-monitor.h b/src/backends/meta-monitor.h
+diff '--color=auto' -ruN a/src/backends/meta-monitor.h b/src/backends/meta-monitor.h
 --- a/src/backends/meta-monitor.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-monitor.h	2023-10-03 20:26:00.169129039 +0300
 @@ -118,6 +118,10 @@
@@ -917,7 +950,7 @@ diff '--color=auto' -ru a/src/backends/meta-monitor.h b/src/backends/meta-monito
  gboolean meta_monitor_get_max_bpc (MetaMonitor  *monitor,
                                     unsigned int *max_bpc);
  
-diff '--color=auto' -ru a/src/backends/meta-monitor-manager.c b/src/backends/meta-monitor-manager.c
+diff '--color=auto' -ruN a/src/backends/meta-monitor-manager.c b/src/backends/meta-monitor-manager.c
 --- a/src/backends/meta-monitor-manager.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-monitor-manager.c	2023-10-03 20:26:00.169129039 +0300
 @@ -131,6 +131,15 @@
@@ -1596,7 +1629,7 @@ diff '--color=auto' -ru a/src/backends/meta-monitor-manager.c b/src/backends/met
    if (manager->in_init)
      return;
  
-diff '--color=auto' -ru a/src/backends/meta-monitor-manager-dummy.c b/src/backends/meta-monitor-manager-dummy.c
+diff '--color=auto' -ruN a/src/backends/meta-monitor-manager-dummy.c b/src/backends/meta-monitor-manager-dummy.c
 --- a/src/backends/meta-monitor-manager-dummy.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-monitor-manager-dummy.c	2023-10-03 20:26:00.102461495 +0300
 @@ -372,6 +372,15 @@
@@ -1651,7 +1684,7 @@ diff '--color=auto' -ru a/src/backends/meta-monitor-manager-dummy.c b/src/backen
    if (meta_settings_is_experimental_feature_enabled (
          settings,
          META_EXPERIMENTAL_FEATURE_SCALE_MONITOR_FRAMEBUFFER))
-diff '--color=auto' -ru a/src/backends/meta-monitor-manager-private.h b/src/backends/meta-monitor-manager-private.h
+diff '--color=auto' -ruN a/src/backends/meta-monitor-manager-private.h b/src/backends/meta-monitor-manager-private.h
 --- a/src/backends/meta-monitor-manager-private.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-monitor-manager-private.h	2023-10-03 20:26:00.169129039 +0300
 @@ -47,7 +47,9 @@
@@ -1740,7 +1773,7 @@ diff '--color=auto' -ru a/src/backends/meta-monitor-manager-private.h b/src/back
  MetaMonitorManagerCapability
                     meta_monitor_manager_get_capabilities (MetaMonitorManager *manager);
  
-diff '--color=auto' -ru a/src/backends/meta-output.c b/src/backends/meta-output.c
+diff '--color=auto' -ruN a/src/backends/meta-output.c b/src/backends/meta-output.c
 --- a/src/backends/meta-output.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-output.c	2023-10-03 20:26:00.169129039 +0300
 @@ -64,6 +64,8 @@
@@ -1784,7 +1817,7 @@ diff '--color=auto' -ru a/src/backends/meta-output.c b/src/backends/meta-output.
    priv->has_max_bpc = output_assignment->has_max_bpc;
    if (priv->has_max_bpc)
      priv->max_bpc = output_assignment->max_bpc;
-diff '--color=auto' -ru a/src/backends/meta-output.h b/src/backends/meta-output.h
+diff '--color=auto' -ruN a/src/backends/meta-output.h b/src/backends/meta-output.h
 --- a/src/backends/meta-output.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-output.h	2023-10-03 20:26:00.169129039 +0300
 @@ -144,6 +144,8 @@
@@ -1808,7 +1841,7 @@ diff '--color=auto' -ru a/src/backends/meta-output.h b/src/backends/meta-output.
  META_EXPORT_TEST
  gboolean meta_output_get_max_bpc (MetaOutput   *output,
                                    unsigned int *max_bpc);
-diff '--color=auto' -ru a/src/backends/meta-renderer-view.c b/src/backends/meta-renderer-view.c
+diff '--color=auto' -ruN a/src/backends/meta-renderer-view.c b/src/backends/meta-renderer-view.c
 --- a/src/backends/meta-renderer-view.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-renderer-view.c	2023-10-03 20:26:00.169129039 +0300
 @@ -33,6 +33,7 @@
@@ -1887,7 +1920,7 @@ diff '--color=auto' -ru a/src/backends/meta-renderer-view.c b/src/backends/meta-
  
    g_object_class_install_properties (object_class, PROP_LAST, obj_props);
  }
-diff '--color=auto' -ru a/src/backends/meta-renderer-view.h b/src/backends/meta-renderer-view.h
+diff '--color=auto' -ruN a/src/backends/meta-renderer-view.h b/src/backends/meta-renderer-view.h
 --- a/src/backends/meta-renderer-view.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-renderer-view.h	2023-10-03 20:26:00.172462417 +0300
 @@ -36,3 +36,5 @@
@@ -1896,7 +1929,7 @@ diff '--color=auto' -ru a/src/backends/meta-renderer-view.h b/src/backends/meta-
  MetaCrtc *meta_renderer_view_get_crtc (MetaRendererView *view);
 +
 +MetaOutput *meta_renderer_view_get_output (MetaRendererView *view);
-diff '--color=auto' -ru a/src/backends/meta-settings.c b/src/backends/meta-settings.c
+diff '--color=auto' -ruN a/src/backends/meta-settings.c b/src/backends/meta-settings.c
 --- a/src/backends/meta-settings.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-settings.c	2023-10-03 20:30:07.319072174 +0300
 @@ -37,6 +37,7 @@
@@ -2142,7 +2175,7 @@ diff '--color=auto' -ru a/src/backends/meta-settings.c b/src/backends/meta-setti
                    NULL, NULL, NULL,
                    G_TYPE_NONE, 0);
  
-diff '--color=auto' -ru a/src/backends/meta-settings-private.h b/src/backends/meta-settings-private.h
+diff '--color=auto' -ruN a/src/backends/meta-settings-private.h b/src/backends/meta-settings-private.h
 --- a/src/backends/meta-settings-private.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/meta-settings-private.h	2023-10-03 20:31:32.793545570 +0300
 @@ -29,9 +29,11 @@
@@ -2182,7 +2215,7 @@ diff '--color=auto' -ru a/src/backends/meta-settings-private.h b/src/backends/me
 +
 +void meta_settings_enable_x11_fractional_scaling (MetaSettings *settings,
 +                                                  gboolean      enabled);
-diff '--color=auto' -ru a/src/backends/native/meta-backend-native.c b/src/backends/native/meta-backend-native.c
+diff '--color=auto' -ruN a/src/backends/native/meta-backend-native.c b/src/backends/native/meta-backend-native.c
 --- a/src/backends/native/meta-backend-native.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-backend-native.c	2023-10-03 20:26:00.169129039 +0300
 @@ -592,6 +592,9 @@
@@ -2195,7 +2228,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-backend-native.c b/src/backen
    if (meta_is_udev_device_preferred_primary (device))
      flags |= META_KMS_DEVICE_FLAG_PREFERRED_PRIMARY;
  
-diff '--color=auto' -ru a/src/backends/native/meta-gpu-kms.c b/src/backends/native/meta-gpu-kms.c
+diff '--color=auto' -ruN a/src/backends/native/meta-gpu-kms.c b/src/backends/native/meta-gpu-kms.c
 --- a/src/backends/native/meta-gpu-kms.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-gpu-kms.c	2023-10-03 20:26:00.169129039 +0300
 @@ -132,6 +132,23 @@
@@ -2222,7 +2255,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-gpu-kms.c b/src/backends/nati
  static int
  compare_outputs (gconstpointer one,
                   gconstpointer two)
-diff '--color=auto' -ru a/src/backends/native/meta-gpu-kms.h b/src/backends/native/meta-gpu-kms.h
+diff '--color=auto' -ruN a/src/backends/native/meta-gpu-kms.h b/src/backends/native/meta-gpu-kms.h
 --- a/src/backends/native/meta-gpu-kms.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-gpu-kms.h	2023-10-03 20:26:00.169129039 +0300
 @@ -44,6 +44,7 @@
@@ -2233,7 +2266,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-gpu-kms.h b/src/backends/nati
  
  MetaKmsDevice * meta_gpu_kms_get_kms_device (MetaGpuKms *gpu_kms);
  
-diff '--color=auto' -ru a/src/backends/native/meta-kms-connector.c b/src/backends/native/meta-kms-connector.c
+diff '--color=auto' -ruN a/src/backends/native/meta-kms-connector.c b/src/backends/native/meta-kms-connector.c
 --- a/src/backends/native/meta-kms-connector.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-kms-connector.c	2023-10-03 20:26:00.169129039 +0300
 @@ -408,6 +408,10 @@
@@ -2277,7 +2310,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-kms-connector.c b/src/backend
      },
      .dpms_enum = {
        [META_KMS_CONNECTOR_DPMS_ON] =
-diff '--color=auto' -ru a/src/backends/native/meta-kms-connector.h b/src/backends/native/meta-kms-connector.h
+diff '--color=auto' -ruN a/src/backends/native/meta-kms-connector.h b/src/backends/native/meta-kms-connector.h
 --- a/src/backends/native/meta-kms-connector.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-kms-connector.h	2023-10-03 20:26:00.169129039 +0300
 @@ -69,6 +69,8 @@
@@ -2289,7 +2322,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-kms-connector.h b/src/backend
  } MetaKmsConnectorState;
  
  META_EXPORT_TEST
-diff '--color=auto' -ru a/src/backends/native/meta-kms-connector-private.h b/src/backends/native/meta-kms-connector-private.h
+diff '--color=auto' -ruN a/src/backends/native/meta-kms-connector-private.h b/src/backends/native/meta-kms-connector-private.h
 --- a/src/backends/native/meta-kms-connector-private.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-kms-connector-private.h	2023-10-03 20:26:00.169129039 +0300
 @@ -39,6 +39,7 @@
@@ -2300,7 +2333,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-kms-connector-private.h b/src
    META_KMS_CONNECTOR_N_PROPS
  } MetaKmsConnectorProp;
  
-diff '--color=auto' -ru a/src/backends/native/meta-kms-crtc.c b/src/backends/native/meta-kms-crtc.c
+diff '--color=auto' -ruN a/src/backends/native/meta-kms-crtc.c b/src/backends/native/meta-kms-crtc.c
 --- a/src/backends/native/meta-kms-crtc.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-kms-crtc.c	2023-10-03 20:26:00.169129039 +0300
 @@ -427,6 +427,11 @@
@@ -2315,7 +2348,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-kms-crtc.c b/src/backends/nat
      }
    };
  }
-diff '--color=auto' -ru a/src/backends/native/meta-kms-crtc-private.h b/src/backends/native/meta-kms-crtc-private.h
+diff '--color=auto' -ruN a/src/backends/native/meta-kms-crtc-private.h b/src/backends/native/meta-kms-crtc-private.h
 --- a/src/backends/native/meta-kms-crtc-private.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-kms-crtc-private.h	2023-10-03 20:26:00.169129039 +0300
 @@ -28,9 +28,17 @@
@@ -2336,7 +2369,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-kms-crtc-private.h b/src/back
  MetaKmsCrtc * meta_kms_crtc_new (MetaKmsImplDevice  *impl_device,
                                   drmModeCrtc        *drm_crtc,
                                   int                 idx,
-diff '--color=auto' -ru a/src/backends/native/meta-kms-impl-device-atomic.c b/src/backends/native/meta-kms-impl-device-atomic.c
+diff '--color=auto' -ruN a/src/backends/native/meta-kms-impl-device-atomic.c b/src/backends/native/meta-kms-impl-device-atomic.c
 --- a/src/backends/native/meta-kms-impl-device-atomic.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-kms-impl-device-atomic.c	2023-10-03 20:26:00.169129039 +0300
 @@ -334,6 +334,39 @@
@@ -2396,7 +2429,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-kms-impl-device-atomic.c b/sr
    if (!process_entries (impl_device,
                          update,
                          req,
-diff '--color=auto' -ru a/src/backends/native/meta-kms-impl-device-simple.c b/src/backends/native/meta-kms-impl-device-simple.c
+diff '--color=auto' -ruN a/src/backends/native/meta-kms-impl-device-simple.c b/src/backends/native/meta-kms-impl-device-simple.c
 --- a/src/backends/native/meta-kms-impl-device-simple.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-kms-impl-device-simple.c	2023-10-03 20:26:00.169129039 +0300
 @@ -180,6 +180,47 @@
@@ -2498,7 +2531,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-kms-impl-device-simple.c b/sr
    if (!process_plane_assignments (impl_device, update, &failed_planes, &error))
      goto err;
  
-diff '--color=auto' -ru a/src/backends/native/meta-kms-types.h b/src/backends/native/meta-kms-types.h
+diff '--color=auto' -ruN a/src/backends/native/meta-kms-types.h b/src/backends/native/meta-kms-types.h
 --- a/src/backends/native/meta-kms-types.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-kms-types.h	2023-10-03 20:26:00.169129039 +0300
 @@ -64,6 +64,7 @@
@@ -2509,7 +2542,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-kms-types.h b/src/backends/na
  } MetaKmsDeviceFlag;
  
  typedef enum _MetaKmsResourceChanges
-diff '--color=auto' -ru a/src/backends/native/meta-kms-update.c b/src/backends/native/meta-kms-update.c
+diff '--color=auto' -ruN a/src/backends/native/meta-kms-update.c b/src/backends/native/meta-kms-update.c
 --- a/src/backends/native/meta-kms-update.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-kms-update.c	2023-10-03 20:26:00.169129039 +0300
 @@ -40,6 +40,7 @@
@@ -2588,7 +2621,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-kms-update.c b/src/backends/n
    g_list_free_full (update->crtc_color_updates,
                      (GDestroyNotify) meta_kms_crtc_color_updates_free);
    g_clear_pointer (&update->custom_page_flip, meta_kms_custom_page_flip_free);
-diff '--color=auto' -ru a/src/backends/native/meta-kms-update.h b/src/backends/native/meta-kms-update.h
+diff '--color=auto' -ruN a/src/backends/native/meta-kms-update.h b/src/backends/native/meta-kms-update.h
 --- a/src/backends/native/meta-kms-update.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-kms-update.h	2023-10-03 20:26:00.169129039 +0300
 @@ -152,6 +152,10 @@
@@ -2602,7 +2635,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-kms-update.h b/src/backends/n
  void meta_kms_plane_assignment_set_fb_damage (MetaKmsPlaneAssignment *plane_assignment,
                                                const int              *rectangles,
                                                int                     n_rectangles);
-diff '--color=auto' -ru a/src/backends/native/meta-kms-update-private.h b/src/backends/native/meta-kms-update-private.h
+diff '--color=auto' -ruN a/src/backends/native/meta-kms-update-private.h b/src/backends/native/meta-kms-update-private.h
 --- a/src/backends/native/meta-kms-update-private.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-kms-update-private.h	2023-10-03 20:26:00.169129039 +0300
 @@ -111,6 +111,16 @@
@@ -2632,7 +2665,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-kms-update-private.h b/src/ba
  GList * meta_kms_update_get_crtc_color_updates (MetaKmsUpdate *update);
  
  MetaKmsCustomPageFlip * meta_kms_update_take_custom_page_flip_func (MetaKmsUpdate *update);
-diff '--color=auto' -ru a/src/backends/native/meta-monitor-manager-native.c b/src/backends/native/meta-monitor-manager-native.c
+diff '--color=auto' -ruN a/src/backends/native/meta-monitor-manager-native.c b/src/backends/native/meta-monitor-manager-native.c
 --- a/src/backends/native/meta-monitor-manager-native.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-monitor-manager-native.c	2023-10-03 20:26:00.102461495 +0300
 @@ -451,6 +451,7 @@
@@ -2643,7 +2676,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-monitor-manager-native.c b/sr
        break;
      case META_LOGICAL_MONITOR_LAYOUT_MODE_PHYSICAL:
        constraints |= META_MONITOR_SCALES_CONSTRAINT_NO_FRAC;
-diff '--color=auto' -ru a/src/backends/native/meta-onscreen-native.c b/src/backends/native/meta-onscreen-native.c
+diff '--color=auto' -ruN a/src/backends/native/meta-onscreen-native.c b/src/backends/native/meta-onscreen-native.c
 --- a/src/backends/native/meta-onscreen-native.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-onscreen-native.c	2023-10-03 20:26:00.165795662 +0300
 @@ -618,6 +618,9 @@
@@ -2698,7 +2731,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-onscreen-native.c b/src/backe
    if (!gbm_surface)
      {
        g_set_error (error, G_IO_ERROR, G_IO_ERROR_FAILED,
-diff '--color=auto' -ru a/src/backends/native/meta-output-kms.c b/src/backends/native/meta-output-kms.c
+diff '--color=auto' -ruN a/src/backends/native/meta-output-kms.c b/src/backends/native/meta-output-kms.c
 --- a/src/backends/native/meta-output-kms.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-output-kms.c	2023-10-03 20:26:00.169129039 +0300
 @@ -96,6 +96,26 @@
@@ -2738,7 +2771,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-output-kms.c b/src/backends/n
    max_bpc_range = meta_kms_connector_get_max_bpc (kms_connector);
    if (max_bpc_range)
      {
-diff '--color=auto' -ru a/src/backends/native/meta-output-kms.h b/src/backends/native/meta-output-kms.h
+diff '--color=auto' -ruN a/src/backends/native/meta-output-kms.h b/src/backends/native/meta-output-kms.h
 --- a/src/backends/native/meta-output-kms.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-output-kms.h	2023-10-03 20:26:00.169129039 +0300
 @@ -37,6 +37,10 @@
@@ -2752,7 +2785,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-output-kms.h b/src/backends/n
  void meta_output_kms_set_max_bpc (MetaOutputKms *output_kms,
                                    MetaKmsUpdate *kms_update);
  
-diff '--color=auto' -ru a/src/backends/native/meta-renderer-native.c b/src/backends/native/meta-renderer-native.c
+diff '--color=auto' -ruN a/src/backends/native/meta-renderer-native.c b/src/backends/native/meta-renderer-native.c
 --- a/src/backends/native/meta-renderer-native.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-renderer-native.c	2023-10-03 20:26:00.172462417 +0300
 @@ -1441,6 +1441,7 @@
@@ -2795,7 +2828,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-renderer-native.c b/src/backe
    ret = TRUE;
  out:
    maybe_restore_cogl_egl_api (renderer_native);
-diff '--color=auto' -ru a/src/backends/native/meta-renderer-native-gles3.c b/src/backends/native/meta-renderer-native-gles3.c
+diff '--color=auto' -ruN a/src/backends/native/meta-renderer-native-gles3.c b/src/backends/native/meta-renderer-native-gles3.c
 --- a/src/backends/native/meta-renderer-native-gles3.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-renderer-native-gles3.c	2023-10-03 20:26:00.165795662 +0300
 @@ -43,6 +43,120 @@
@@ -2973,7 +3006,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-renderer-native-gles3.c b/src
  }
  
  gboolean
-diff '--color=auto' -ru a/src/backends/native/meta-renderer-native-private.h b/src/backends/native/meta-renderer-native-private.h
+diff '--color=auto' -ruN a/src/backends/native/meta-renderer-native-private.h b/src/backends/native/meta-renderer-native-private.h
 --- a/src/backends/native/meta-renderer-native-private.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-renderer-native-private.h	2023-10-03 20:26:00.165795662 +0300
 @@ -60,6 +60,7 @@
@@ -2984,7 +3017,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-renderer-native-private.h b/s
  
      /* For GPU blit mode */
      EGLContext egl_context;
-diff '--color=auto' -ru a/src/backends/native/meta-renderer-view-native.c b/src/backends/native/meta-renderer-view-native.c
+diff '--color=auto' -ruN a/src/backends/native/meta-renderer-view-native.c b/src/backends/native/meta-renderer-view-native.c
 --- a/src/backends/native/meta-renderer-view-native.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-renderer-view-native.c	2023-10-03 20:26:00.172462417 +0300
 @@ -22,11 +22,28 @@
@@ -3128,7 +3161,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-renderer-view-native.c b/src/
 +  view_native->requested_frame_sync_mode = META_FRAME_SYNC_MODE_DISABLED;
 +  view_native->frame_sync_mode = META_FRAME_SYNC_MODE_INIT;
  }
-diff '--color=auto' -ru a/src/backends/native/meta-renderer-view-native.h b/src/backends/native/meta-renderer-view-native.h
+diff '--color=auto' -ruN a/src/backends/native/meta-renderer-view-native.h b/src/backends/native/meta-renderer-view-native.h
 --- a/src/backends/native/meta-renderer-view-native.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-renderer-view-native.h	2023-10-03 20:26:00.172462417 +0300
 @@ -27,3 +27,11 @@
@@ -3143,7 +3176,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-renderer-view-native.h b/src/
 +                                                   gboolean                enabled);
 +
 +gboolean meta_renderer_view_native_is_frame_sync_enabled (MetaRendererViewNative *view_native);
-diff '--color=auto' -ru a/src/backends/native/meta-udev.c b/src/backends/native/meta-udev.c
+diff '--color=auto' -ruN a/src/backends/native/meta-udev.c b/src/backends/native/meta-udev.c
 --- a/src/backends/native/meta-udev.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-udev.c	2023-10-03 20:26:00.169129039 +0300
 @@ -101,6 +101,13 @@
@@ -3160,7 +3193,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-udev.c b/src/backends/native/
  meta_is_udev_device_ignore (GUdevDevice *device)
  {
    return meta_has_udev_device_tag (device, "mutter-device-ignore");
-diff '--color=auto' -ru a/src/backends/native/meta-udev.h b/src/backends/native/meta-udev.h
+diff '--color=auto' -ruN a/src/backends/native/meta-udev.h b/src/backends/native/meta-udev.h
 --- a/src/backends/native/meta-udev.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/native/meta-udev.h	2023-10-03 20:26:00.169129039 +0300
 @@ -32,6 +32,8 @@
@@ -3172,7 +3205,7 @@ diff '--color=auto' -ru a/src/backends/native/meta-udev.h b/src/backends/native/
  gboolean meta_is_udev_device_ignore (GUdevDevice *device);
  
  gboolean meta_is_udev_test_device (GUdevDevice *device);
-diff '--color=auto' -ru a/src/backends/x11/meta-crtc-xrandr.c b/src/backends/x11/meta-crtc-xrandr.c
+diff '--color=auto' -ruN a/src/backends/x11/meta-crtc-xrandr.c b/src/backends/x11/meta-crtc-xrandr.c
 --- a/src/backends/x11/meta-crtc-xrandr.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/x11/meta-crtc-xrandr.c	2023-10-03 20:26:00.102461495 +0300
 @@ -34,6 +34,7 @@
@@ -3318,7 +3351,7 @@ diff '--color=auto' -ru a/src/backends/x11/meta-crtc-xrandr.c b/src/backends/x11
      }
  
    return crtc_xrandr;
-diff '--color=auto' -ru a/src/backends/x11/meta-crtc-xrandr.h b/src/backends/x11/meta-crtc-xrandr.h
+diff '--color=auto' -ruN a/src/backends/x11/meta-crtc-xrandr.h b/src/backends/x11/meta-crtc-xrandr.h
 --- a/src/backends/x11/meta-crtc-xrandr.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/x11/meta-crtc-xrandr.h	2023-10-03 20:26:00.102461495 +0300
 @@ -41,12 +41,18 @@
@@ -3344,7 +3377,7 @@ diff '--color=auto' -ru a/src/backends/x11/meta-crtc-xrandr.h b/src/backends/x11
 +                                       XRRScreenResources         *resources,
 +                                       XRRCrtcTransformAttributes *transform_attributes,
 +                                       float                       scale_multiplier);
-diff '--color=auto' -ru a/src/backends/x11/meta-gpu-xrandr.c b/src/backends/x11/meta-gpu-xrandr.c
+diff '--color=auto' -ruN a/src/backends/x11/meta-gpu-xrandr.c b/src/backends/x11/meta-gpu-xrandr.c
 --- a/src/backends/x11/meta-gpu-xrandr.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/x11/meta-gpu-xrandr.c	2023-10-03 20:26:00.102461495 +0300
 @@ -23,12 +23,14 @@
@@ -3533,7 +3566,7 @@ diff '--color=auto' -ru a/src/backends/x11/meta-gpu-xrandr.c b/src/backends/x11/
    meta_gpu_take_crtcs (gpu, crtcs);
  
    primary_output = XRRGetOutputPrimary (xdisplay,
-diff '--color=auto' -ru a/src/backends/x11/meta-gpu-xrandr.h b/src/backends/x11/meta-gpu-xrandr.h
+diff '--color=auto' -ruN a/src/backends/x11/meta-gpu-xrandr.h b/src/backends/x11/meta-gpu-xrandr.h
 --- a/src/backends/x11/meta-gpu-xrandr.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/x11/meta-gpu-xrandr.h	2023-10-03 20:26:00.102461495 +0300
 @@ -30,6 +30,10 @@
@@ -3547,7 +3580,7 @@ diff '--color=auto' -ru a/src/backends/x11/meta-gpu-xrandr.h b/src/backends/x11/
  void meta_gpu_xrandr_get_max_screen_size (MetaGpuXrandr *gpu_xrandr,
                                            int           *max_width,
                                            int           *max_height);
-diff '--color=auto' -ru a/src/backends/x11/meta-monitor-manager-xrandr.c b/src/backends/x11/meta-monitor-manager-xrandr.c
+diff '--color=auto' -ruN a/src/backends/x11/meta-monitor-manager-xrandr.c b/src/backends/x11/meta-monitor-manager-xrandr.c
 --- a/src/backends/x11/meta-monitor-manager-xrandr.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/x11/meta-monitor-manager-xrandr.c	2023-10-03 20:26:00.105794871 +0300
 @@ -36,6 +36,7 @@
@@ -4338,7 +4371,7 @@ diff '--color=auto' -ru a/src/backends/x11/meta-monitor-manager-xrandr.c b/src/b
    manager_class->set_power_save_mode = meta_monitor_manager_xrandr_set_power_save_mode;
    manager_class->change_backlight = meta_monitor_manager_xrandr_change_backlight;
    manager_class->tiled_monitor_added = meta_monitor_manager_xrandr_tiled_monitor_added;
-diff '--color=auto' -ru a/src/backends/x11/meta-monitor-manager-xrandr.h b/src/backends/x11/meta-monitor-manager-xrandr.h
+diff '--color=auto' -ruN a/src/backends/x11/meta-monitor-manager-xrandr.h b/src/backends/x11/meta-monitor-manager-xrandr.h
 --- a/src/backends/x11/meta-monitor-manager-xrandr.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/x11/meta-monitor-manager-xrandr.h	2023-10-03 20:26:00.105794871 +0300
 @@ -32,7 +32,7 @@
@@ -4351,7 +4384,7 @@ diff '--color=auto' -ru a/src/backends/x11/meta-monitor-manager-xrandr.h b/src/b
                                                      XEvent                   *event);
 +
 +uint32_t meta_monitor_manager_xrandr_get_config_timestamp (MetaMonitorManagerXrandr *manager);
-diff '--color=auto' -ru a/src/backends/x11/meta-output-xrandr.c b/src/backends/x11/meta-output-xrandr.c
+diff '--color=auto' -ruN a/src/backends/x11/meta-output-xrandr.c b/src/backends/x11/meta-output-xrandr.c
 --- a/src/backends/x11/meta-output-xrandr.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/x11/meta-output-xrandr.c	2023-10-03 20:26:00.105794871 +0300
 @@ -1005,7 +1005,8 @@
@@ -4364,7 +4397,7 @@ diff '--color=auto' -ru a/src/backends/x11/meta-output-xrandr.c b/src/backends/x
      output_info_init_tile_info (output_info, xdisplay, output_id);
    output_info_init_modes (output_info, gpu, xrandr_output);
    output_info_init_crtcs (output_info, gpu, xrandr_output);
-diff '--color=auto' -ru a/src/backends/x11/nested/meta-renderer-x11-nested.c b/src/backends/x11/nested/meta-renderer-x11-nested.c
+diff '--color=auto' -ruN a/src/backends/x11/nested/meta-renderer-x11-nested.c b/src/backends/x11/nested/meta-renderer-x11-nested.c
 --- a/src/backends/x11/nested/meta-renderer-x11-nested.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/backends/x11/nested/meta-renderer-x11-nested.c	2023-10-03 20:26:00.172462417 +0300
 @@ -138,6 +138,7 @@
@@ -4375,7 +4408,7 @@ diff '--color=auto' -ru a/src/backends/x11/nested/meta-renderer-x11-nested.c b/s
                         "refresh-rate", mode_info->refresh_rate,
                         "framebuffer", COGL_FRAMEBUFFER (fake_onscreen),
                         "offscreen", COGL_FRAMEBUFFER (offscreen),
-diff '--color=auto' -ru a/src/compositor/meta-compositor-native.c b/src/compositor/meta-compositor-native.c
+diff '--color=auto' -ruN a/src/compositor/meta-compositor-native.c b/src/compositor/meta-compositor-native.c
 --- a/src/compositor/meta-compositor-native.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/compositor/meta-compositor-native.c	2023-10-03 20:26:00.172462417 +0300
 @@ -43,6 +43,9 @@
@@ -4388,7 +4421,7 @@ diff '--color=auto' -ru a/src/compositor/meta-compositor-native.c b/src/composit
    parent_class = META_COMPOSITOR_CLASS (meta_compositor_native_parent_class);
    parent_class->before_paint (compositor, compositor_view);
  }
-diff '--color=auto' -ru a/src/compositor/meta-compositor-view-native.c b/src/compositor/meta-compositor-view-native.c
+diff '--color=auto' -ruN a/src/compositor/meta-compositor-view-native.c b/src/compositor/meta-compositor-view-native.c
 --- a/src/compositor/meta-compositor-view-native.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/compositor/meta-compositor-view-native.c	2023-10-03 20:26:00.172462417 +0300
 @@ -26,14 +26,20 @@
@@ -4651,7 +4684,7 @@ diff '--color=auto' -ru a/src/compositor/meta-compositor-view-native.c b/src/com
    object_class->finalize = meta_compositor_view_native_finalize;
  }
  
-diff '--color=auto' -ru a/src/compositor/meta-compositor-view-native.h b/src/compositor/meta-compositor-view-native.h
+diff '--color=auto' -ruN a/src/compositor/meta-compositor-view-native.h b/src/compositor/meta-compositor-view-native.h
 --- a/src/compositor/meta-compositor-view-native.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/compositor/meta-compositor-view-native.h	2023-10-03 20:26:00.172462417 +0300
 @@ -36,3 +36,6 @@
@@ -4661,7 +4694,7 @@ diff '--color=auto' -ru a/src/compositor/meta-compositor-view-native.h b/src/com
 +
 +void meta_compositor_view_native_maybe_update_frame_sync_surface (MetaCompositorViewNative *view_native,
 +                                                                  MetaCompositor           *compositor);
-diff '--color=auto' -ru a/src/compositor/meta-compositor-x11.c b/src/compositor/meta-compositor-x11.c
+diff '--color=auto' -ruN a/src/compositor/meta-compositor-x11.c b/src/compositor/meta-compositor-x11.c
 --- a/src/compositor/meta-compositor-x11.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/compositor/meta-compositor-x11.c	2023-10-03 20:26:00.105794871 +0300
 @@ -30,6 +30,7 @@
@@ -4814,7 +4847,7 @@ diff '--color=auto' -ru a/src/compositor/meta-compositor-x11.c b/src/compositor/
  
  out:
    set_unredirected_window (compositor_x11, window_to_unredirect);
-diff '--color=auto' -ru a/src/compositor/meta-surface-actor.c b/src/compositor/meta-surface-actor.c
+diff '--color=auto' -ruN a/src/compositor/meta-surface-actor.c b/src/compositor/meta-surface-actor.c
 --- a/src/compositor/meta-surface-actor.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/compositor/meta-surface-actor.c	2023-10-03 20:26:00.172462417 +0300
 @@ -63,6 +63,7 @@
@@ -4872,7 +4905,7 @@ diff '--color=auto' -ru a/src/compositor/meta-surface-actor.c b/src/compositor/m
    if (!frozen && priv->pending_damage)
      {
        int i, n_rects = cairo_region_num_rectangles (priv->pending_damage);
-diff '--color=auto' -ru a/src/compositor/meta-surface-actor.h b/src/compositor/meta-surface-actor.h
+diff '--color=auto' -ruN a/src/compositor/meta-surface-actor.h b/src/compositor/meta-surface-actor.h
 --- a/src/compositor/meta-surface-actor.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/compositor/meta-surface-actor.h	2023-10-03 20:26:00.172462417 +0300
 @@ -42,6 +42,9 @@
@@ -4885,7 +4918,7 @@ diff '--color=auto' -ru a/src/compositor/meta-surface-actor.h b/src/compositor/m
  void meta_surface_actor_set_input_region (MetaSurfaceActor *self,
                                            cairo_region_t   *region);
  void meta_surface_actor_set_opaque_region (MetaSurfaceActor *self,
-diff '--color=auto' -ru a/src/core/events.c b/src/core/events.c
+diff '--color=auto' -ruN a/src/core/events.c b/src/core/events.c
 --- a/src/core/events.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/core/events.c	2023-10-03 20:26:00.165795662 +0300
 @@ -530,7 +530,7 @@
@@ -4897,8 +4930,38 @@ diff '--color=auto' -ru a/src/core/events.c b/src/core/events.c
  
    if (wayland_compositor && !bypass_wayland)
      {
-Only in b/src/core: meta-private-introspected.h
-diff '--color=auto' -ru a/src/core/window.c b/src/core/window.c
+diff '--color=auto' -ruN a/src/core/meta-private-introspected.h b/src/core/meta-private-introspected.h
+--- a/src/core/meta-private-introspected.h	1970-01-01 02:00:00.000000000 +0200
++++ b/src/core/meta-private-introspected.h	2023-10-03 20:26:00.162462284 +0300
+@@ -0,0 +1,27 @@
++# pragma once
++
++#include <glib-object.h>
++
++#include <meta/types.h>
++
++/**
++ * MetaTileConstraint:
++ * @META_TILE_CONSTRAINT_NONE: No constraint
++ * @META_TILE_CONSTRAINT_WINDOW: Window constraint
++ * @META_TILE_CONSTRAINT_MONITOR: Monitor constraint
++ */
++typedef enum
++{
++  META_WINDOW_CONSTRAINT_NONE,
++  META_WINDOW_CONSTRAINT_WINDOW,
++  META_WINDOW_CONSTRAINT_MONITOR,
++} MetaWindowConstraint;
++
++
++META_EXPORT
++void
++meta_window_override_constraints (MetaWindow           *window,
++                                  MetaWindowConstraint  top,
++                                  MetaWindowConstraint  left,
++                                  MetaWindowConstraint  right,
++                                  MetaWindowConstraint  bottom);
+diff '--color=auto' -ruN a/src/core/window.c b/src/core/window.c
 --- a/src/core/window.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/core/window.c	2023-10-03 20:26:00.172462417 +0300
 @@ -74,6 +74,7 @@
@@ -5022,7 +5085,7 @@ diff '--color=auto' -ru a/src/core/window.c b/src/core/window.c
  /**
   * meta_window_get_buffer_rect:
   * @window: a #MetaWindow
-diff '--color=auto' -ru a/src/core/window-private.h b/src/core/window-private.h
+diff '--color=auto' -ruN a/src/core/window-private.h b/src/core/window-private.h
 --- a/src/core/window-private.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/core/window-private.h	2023-10-03 20:26:00.172462417 +0300
 @@ -230,6 +230,13 @@
@@ -5049,7 +5112,7 @@ diff '--color=auto' -ru a/src/core/window-private.h b/src/core/window-private.h
  void        meta_window_update_unfocused_button_grabs (MetaWindow *window);
  
  void        meta_window_update_appears_focused (MetaWindow *window);
-diff '--color=auto' -ru a/src/core/workspace.c b/src/core/workspace.c
+diff '--color=auto' -ruN a/src/core/workspace.c b/src/core/workspace.c
 --- a/src/core/workspace.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/core/workspace.c	2023-10-03 20:26:00.099128118 +0300
 @@ -705,6 +705,7 @@
@@ -5060,7 +5123,7 @@ diff '--color=auto' -ru a/src/core/workspace.c b/src/core/workspace.c
    ret = g_list_index (workspace->manager->workspaces, workspace);
    g_return_val_if_fail (ret >= 0, -1);
  
-diff '--color=auto' -ru a/src/meson.build b/src/meson.build
+diff '--color=auto' -ruN a/src/meson.build b/src/meson.build
 --- a/src/meson.build	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/meson.build	2023-10-03 20:26:00.165795662 +0300
 @@ -1257,7 +1257,8 @@
@@ -5073,7 +5136,7 @@ diff '--color=auto' -ru a/src/meson.build b/src/meson.build
      ],
      nsversion: libmutter_api_version,
      namespace: 'Meta',
-diff '--color=auto' -ru a/src/tests/meson.build b/src/tests/meson.build
+diff '--color=auto' -ruN a/src/tests/meson.build b/src/tests/meson.build
 --- a/src/tests/meson.build	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/tests/meson.build	2023-10-03 20:26:00.102461495 +0300
 @@ -683,7 +683,6 @@
@@ -5084,7 +5147,7 @@ diff '--color=auto' -ru a/src/tests/meson.build b/src/tests/meson.build
    'unmaximize-new-size',
    'fullscreen-maximize',
    'unfullscreen-strut-change',
-diff '--color=auto' -ru a/src/tests/meta-monitor-manager-test.c b/src/tests/meta-monitor-manager-test.c
+diff '--color=auto' -ruN a/src/tests/meta-monitor-manager-test.c b/src/tests/meta-monitor-manager-test.c
 --- a/src/tests/meta-monitor-manager-test.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/tests/meta-monitor-manager-test.c	2023-10-03 20:26:00.105794871 +0300
 @@ -325,6 +325,7 @@
@@ -5105,7 +5168,7 @@ diff '--color=auto' -ru a/src/tests/meta-monitor-manager-test.c b/src/tests/meta
  }
  
  static gboolean
-diff '--color=auto' -ru a/src/tests/meta-monitor-test-utils.c b/src/tests/meta-monitor-test-utils.c
+diff '--color=auto' -ruN a/src/tests/meta-monitor-test-utils.c b/src/tests/meta-monitor-test-utils.c
 --- a/src/tests/meta-monitor-test-utils.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/tests/meta-monitor-test-utils.c	2023-10-03 20:26:00.169129039 +0300
 @@ -394,6 +394,10 @@
@@ -5127,7 +5190,7 @@ diff '--color=auto' -ru a/src/tests/meta-monitor-test-utils.c b/src/tests/meta-m
              .has_max_bpc = !!setup->outputs[i].max_bpc,
              .max_bpc = setup->outputs[i].max_bpc,
            };
-diff '--color=auto' -ru a/src/tests/meta-monitor-test-utils.h b/src/tests/meta-monitor-test-utils.h
+diff '--color=auto' -ruN a/src/tests/meta-monitor-test-utils.h b/src/tests/meta-monitor-test-utils.h
 --- a/src/tests/meta-monitor-test-utils.h	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/tests/meta-monitor-test-utils.h	2023-10-03 20:26:00.169129039 +0300
 @@ -105,6 +105,7 @@
@@ -5146,7 +5209,7 @@ diff '--color=auto' -ru a/src/tests/meta-monitor-test-utils.h b/src/tests/meta-m
    unsigned int max_bpc;
  } MonitorTestCaseMonitor;
  
-diff '--color=auto' -ru a/src/tests/meta-ref-test.c b/src/tests/meta-ref-test.c
+diff '--color=auto' -ruN a/src/tests/meta-ref-test.c b/src/tests/meta-ref-test.c
 --- a/src/tests/meta-ref-test.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/tests/meta-ref-test.c	2023-10-03 20:26:00.099128118 +0300
 @@ -516,6 +516,11 @@
@@ -5161,8 +5224,34 @@ diff '--color=auto' -ru a/src/tests/meta-ref-test.c b/src/tests/meta-ref-test.c
        if (!compare_images (ref_image, view_image, &gl_fuzz,
                             &diff_stat))
          {
-Only in b/src/tests/monitor-configs: vrr-disallowed.xml
-diff '--color=auto' -ru a/src/tests/monitor-store-unit-tests.c b/src/tests/monitor-store-unit-tests.c
+diff '--color=auto' -ruN a/src/tests/monitor-configs/vrr-disallowed.xml b/src/tests/monitor-configs/vrr-disallowed.xml
+--- a/src/tests/monitor-configs/vrr-disallowed.xml	1970-01-01 02:00:00.000000000 +0200
++++ b/src/tests/monitor-configs/vrr-disallowed.xml	2023-10-03 20:26:00.169129039 +0300
+@@ -0,0 +1,23 @@
++<monitors version="2">
++  <configuration>
++    <logicalmonitor>
++      <x>0</x>
++      <y>0</y>
++      <primary>yes</primary>
++      <monitor>
++	<monitorspec>
++	  <connector>DP-1</connector>
++	  <vendor>MetaProduct&apos;s Inc.</vendor>
++	  <product>MetaMonitor</product>
++	  <serial>0x123456</serial>
++	</monitorspec>
++	<mode>
++	  <width>1024</width>
++	  <height>768</height>
++	  <rate>60.000495910644531</rate>
++	</mode>
++	<vrr-allowed>no</vrr-allowed>
++      </monitor>
++    </logicalmonitor>
++  </configuration>
++</monitors>
+diff '--color=auto' -ruN a/src/tests/monitor-store-unit-tests.c b/src/tests/monitor-store-unit-tests.c
 --- a/src/tests/monitor-store-unit-tests.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/tests/monitor-store-unit-tests.c	2023-10-03 20:26:00.169129039 +0300
 @@ -48,6 +48,7 @@
@@ -5244,7 +5333,7 @@ diff '--color=auto' -ru a/src/tests/monitor-store-unit-tests.c b/src/tests/monit
    g_test_add_func ("/backends/monitor-store/max-bpc",
                     meta_test_monitor_store_max_bpc);
    g_test_add_func ("/backends/monitor-store/scale",
-diff '--color=auto' -ru a/src/tests/monitor-unit-tests.c b/src/tests/monitor-unit-tests.c
+diff '--color=auto' -ruN a/src/tests/monitor-unit-tests.c b/src/tests/monitor-unit-tests.c
 --- a/src/tests/monitor-unit-tests.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/tests/monitor-unit-tests.c	2023-10-03 20:26:00.169129039 +0300
 @@ -3255,6 +3255,100 @@
@@ -5470,7 +5559,7 @@ diff '--color=auto' -ru a/src/tests/monitor-unit-tests.c b/src/tests/monitor-uni
    add_monitor_test ("/backends/monitor/custom/scale-config",
                      meta_test_monitor_custom_scale_config);
    add_monitor_test ("/backends/monitor/custom/fractional-scale-config",
-diff '--color=auto' -ru a/src/tests/native-headless.c b/src/tests/native-headless.c
+diff '--color=auto' -ruN a/src/tests/native-headless.c b/src/tests/native-headless.c
 --- a/src/tests/native-headless.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/tests/native-headless.c	2023-10-03 20:26:00.099128118 +0300
 @@ -26,7 +26,8 @@
@@ -5483,7 +5572,7 @@ diff '--color=auto' -ru a/src/tests/native-headless.c b/src/tests/native-headles
  }
  
  int
-diff '--color=auto' -ru a/src/tests/native-thread.c b/src/tests/native-thread.c
+diff '--color=auto' -ruN a/src/tests/native-thread.c b/src/tests/native-thread.c
 --- a/src/tests/native-thread.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/tests/native-thread.c	2023-10-03 20:26:00.102461495 +0300
 @@ -1156,6 +1156,12 @@
@@ -5499,7 +5588,7 @@ diff '--color=auto' -ru a/src/tests/native-thread.c b/src/tests/native-thread.c
    g_assert_cmpint (priority, ==, 20);
  
    return NULL;
-diff '--color=auto' -ru a/src/tests/ref-test-sanity.c b/src/tests/ref-test-sanity.c
+diff '--color=auto' -ruN a/src/tests/ref-test-sanity.c b/src/tests/ref-test-sanity.c
 --- a/src/tests/ref-test-sanity.c	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/tests/ref-test-sanity.c	2023-10-03 20:26:00.099128118 +0300
 @@ -108,6 +108,11 @@
@@ -5514,7 +5603,7 @@ diff '--color=auto' -ru a/src/tests/ref-test-sanity.c b/src/tests/ref-test-sanit
    g_test_expect_message ("libmutter-test",
                           G_LOG_LEVEL_CRITICAL,
                           "Pixel difference exceeds limits*");
-diff '--color=auto' -ru a/src/tests/stacking/unmaximize-new-size.metatest b/src/tests/stacking/unmaximize-new-size.metatest
+diff '--color=auto' -ruN a/src/tests/stacking/unmaximize-new-size.metatest b/src/tests/stacking/unmaximize-new-size.metatest
 --- a/src/tests/stacking/unmaximize-new-size.metatest	2023-09-16 23:51:03.000000000 +0300
 +++ b/src/tests/stacking/unmaximize-new-size.metatest	2023-10-03 20:26:00.099128118 +0300
 @@ -11,11 +11,9 @@
