@@ -6,3 +6,6 @@ cp -fv /lib/udev/rules.d/61-mutter.rules /lib/udev/rules.d/61-mutter.rules.old
 
 cp -rfv /opt/mutter-vrr/lib/udev/rules.d/* /lib/udev/rules.d/
 
+glib-compile-schemas /usr/share/glib-2.0/schemas/
+glib-compile-schemas /opt/mutter-vrr/share/glib-2.0/schemas/
+
