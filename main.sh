@@ -1,7 +1,8 @@
 DEBIAN_FRONTEND=noninteractive
 
 # Clone Upstream
-git clone https://gitlab.gnome.org/GNOME/mutter -b 45.0 mutter-vrr 
+#git clone https://gitlab.gnome.org/GNOME/mutter -b 45.0 mutter-vrr 
+git clone https://gitlab.gnome.org/ashafer/mutter mutter-vrr 
 cp -rvf ./debian ./mutter-vrr
 cd ./mutter-vrr
 for i in $(cat ../patches/series) ; do echo "Applying Patch: $i" && patch -Np1 -i ../patches/$i || bash -c "echo "Applying Patch $i Failed!" && exit 2"; done
