@@ -1,7 +1,7 @@
 DEBIAN_FRONTEND=noninteractive
 
 # Clone Upstream
-#git clone https://gitlab.gnome.org/GNOME/mutter -b 45.0 mutter-vrr 
+#git clone https://gitlab.gnome.org/GNOME/mutter -b 45.1 mutter-vrr 
 git clone https://gitlab.gnome.org/ashafer/mutter mutter-vrr 
 cp -rvf ./debian ./mutter-vrr
 cd ./mutter-vrr
@@ -11,7 +11,7 @@ for i in $(cat ../patches/series) ; do echo "Applying Patch: $i" && patch -Np1 -
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make --createorig -y -l -p mutter-vrr_45.0 || true
+LOGNAME=root dh_make --createorig -y -l -p mutter-vrr_45.1 || true
 dpkg-buildpackage --no-sign
 
 # Move the debs to output
